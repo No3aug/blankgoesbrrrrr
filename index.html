@@ -1,1 +1,82 @@
-Hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>This Is A Meaningful Page </title>
+  <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js" defer></script>
+  
+<body>
+
+<h1 onclick="changeText(this)"> <div>Welcome in The Game's StronGroom</div></h1>
+<script>
+  function changeText(id) {
+  id.innerHTML = "Welcome in The Game's Vault"
+}  
+</script>
+  
+<hr>
+	<marquee style="font-family: Arial"> This site is about     <strong>video games</strong> if you didn't guess</marquee>
+<hr>
+
+<h2><span title="Yeah there is a lot of choice...">Choose on which page you want to go :</span></h2>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="pageLOL.html"> - League of Legend</a></li>
+      <li><a href="pageMinecraft.html"> - Minecraft</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h1 onmouseover="style.color='red'"
+onmouseout="style.color='black'">This is a title</h1>
+    <p>Look i can say a lot of thing</p>
+    <p>I really have no idea of what can i say but i don't want to leave it blank</p>
+    <p><button onclick="myMove()">Click Me</button></p>
+  </article>
+</section>
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+<script>
+function myMove() {
+  let id = null;
+  const elem = document.getElementById("animate");
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+</script>
+  
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+  style="background-color:#666633;width:maxwidth;height:10px;padding:20px;">
+Mouse Over Me</div>
+<script>
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+  
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+</script>
+<footer>
+  <p>Thanks</p>
+</footer>
+
+</body>
+</head>
